@@ -3,6 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const { get } = require("http");
 const { create } = require("domain");
+const { genHTMLText } = require("./lib/generateHTML");
 
 function getManager(array) {
   return inquirer.prompt([
@@ -144,6 +145,7 @@ async function init() {
         break;
     }
   }
-  console.log(fullTeam);
+  let pageHTML = genHTMLText(fullTeam);
+  console.log(pageHTML);
 }
 init();
