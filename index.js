@@ -5,7 +5,7 @@ const { get } = require("http");
 const { create } = require("domain");
 const { genHTMLText } = require("./lib/generateHTML");
 
-function getManager(array) {
+function getManager() {
   return inquirer.prompt([
     {
       name: "name",
@@ -95,7 +95,6 @@ async function createEmployee(type, array) {
   switch (type) {
     case "manager":
       const managerData = await getManager();
-      console.log(managerData);
       const newManager = new employee.manager(
         managerData.name,
         managerData.id,
@@ -146,6 +145,10 @@ async function init() {
     }
   }
   let pageHTML = genHTMLText(fullTeam);
-  console.log(pageHTML);
+  fs.writeFile("./dist/index.html", pageHTML, (err) => {
+    if (err) throw err;
+
+    console.log("File written succesfully");
+  });
 }
 init();
