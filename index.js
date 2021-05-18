@@ -1,9 +1,8 @@
 const employee = require("./lib/employee");
 const fs = require("fs");
 const inquirer = require("inquirer");
-const { get } = require("http");
-const { create } = require("domain");
 const { genHTMLText } = require("./lib/generateHTML");
+const { cssStyle } = require("./lib/generateCSS");
 
 function getManager() {
   return inquirer.prompt([
@@ -148,7 +147,13 @@ async function init() {
   fs.writeFile("./dist/index.html", pageHTML, (err) => {
     if (err) throw err;
 
-    console.log("File written succesfully");
+    console.log("HTML created succesfully");
   });
+  fs.writeFile("./dist/style.css", cssStyle, (err) => {
+    if (err) throw err;
+
+    console.log("CSS created succesfully");
+  });
+  console.log("Your new webpage is in the dist folder!");
 }
 init();
