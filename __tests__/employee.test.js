@@ -14,6 +14,11 @@ describe("Employee", () => {
 
       expect(newEmployee.name).toEqual("");
     });
+    it("should initialize with a blank email", () => {
+      const newEmployee = new employee.employee();
+
+      expect(newEmployee.email).toEqual("");
+    });
     describe("Manager", () => {
       it("should contain the office number which defaults to 0"),
         () => {
