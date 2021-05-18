@@ -1,5 +1,5 @@
-const { it, expect } = require("@jest/globals");
-const { describe } = require("yargs");
+// const { it, expect } = require("@jest/globals");
+// const { describe } = require("yargs");
 const employee = require("../lib/employee");
 
 describe("Employee", () => {
@@ -20,28 +20,25 @@ describe("Employee", () => {
       expect(newEmployee.email).toEqual("");
     });
     describe("Manager", () => {
-      it("should contain the office number which defaults to 0"),
-        () => {
-          const newManager = new employee.manager();
+      it("should contain the office number which defaults to 0", () => {
+        const newManager = new employee.manager();
 
-          expect(newManager.officeNum).toEqual(0);
-        };
+        expect(newManager.officeNum).toEqual(0);
+      });
     });
     describe("Engineer", () => {
-      it("should contain a Github username which defaults to a blank string"),
-        () => {
-          const newEngineer = new employee.engineer();
+      it("should contain a Github username which defaults to a blank string", () => {
+        const newEngineer = new employee.engineer();
 
-          expect(newEngineer.github).toEqual("");
-        };
+        expect(newEngineer.github).toEqual("");
+      });
     });
     describe("Intern", () => {
-      it("should contain the intern's school which defaults to a blank string"),
-        () => {
-          const newIntern = new employee.intern();
+      it("should contain the intern's school which defaults to a blank string", () => {
+        const newIntern = new employee.intern();
 
-          expect(newIntern.school).toEqual("");
-        };
+        expect(newIntern.school).toEqual("");
+      });
     });
   });
 });

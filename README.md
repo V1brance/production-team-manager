@@ -12,6 +12,10 @@ Need a quick way to put together your work teams? This command line program will
 
 Linked is a Google Drive video on using this application:
 
+```
+As a note for grading, all of my classes are stored in one file, so the test is only one file but it tests all 4 classes at once.
+```
+
 [Google Drive Video](google.com)
 
 ## Sample Website
