@@ -16,7 +16,7 @@ Linked is a Google Drive video on using this application:
 As a note for grading, all of my classes are stored in one file, so the test is only one file but it tests all 4 classes at once.
 ```
 
-[Google Drive Video](google.com)
+[Google Drive Video](https://drive.google.com/file/d/14q8MMlGqw1ED2knUyFXfBSEWqXzCbNxS/view)
 
 ## Sample Website
 
